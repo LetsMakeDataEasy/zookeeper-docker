@@ -24,7 +24,7 @@ ARG DISTRO_NAME=zookeeper-3.4.8
 RUN set -x \
     && apk add --no-cache --virtual .build-deps \
         gnupg \
-    && wget -q "http://www-eu.apache.org/dist/zookeeper/$DISTRO_NAME/$DISTRO_NAME.tar.gz" \
+    && wget -q "http://apache.01link.hk/zookeeper/$DISTRO_NAME/$DISTRO_NAME.tar.gz" \
     && wget -q "http://www.us.apache.org/dist/zookeeper/$DISTRO_NAME/$DISTRO_NAME.tar.gz.asc" \
     && export GNUPGHOME="$(mktemp -d)" \
     && gpg --keyserver ha.pool.sks-keyservers.net --recv-key "$GPG_KEY" \
